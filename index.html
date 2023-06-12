@@ -1,0 +1,29 @@
+<!--Exercice 30: Mettez en place un système qui permet de changer de couleur d'arrière plan d'une div de manière aléatoire-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 30</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script>
+        const colors = ['#5D5D81', '#3B3355', '#2BF808', '#04C1DE', '#F3C23E', '#DB6E06', '#919820', '#ED66BB', '#C63D49', '#5D73B1', '#8230EC', '#B25F17','#B1C27FE', '#45C25B','#B25F17','#EB95C4','#B7DDDA'];
+
+        function changeColor() {
+            let randomNumber = Math.floor(Math.random() * colors.length);
+            document.getElementsByClassName('square')[0].style.backgroundColor = colors[randomNumber];
+            alert(`${colors[randomNumber]} va s'afficher.`);
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <h1><span>E</span>xercice <span>30</span></h1>
+    </nav>
+
+    <div class="container">
+        <div class="square"></div>
+        <button onclick="changeColor()" id="btn">Changez</button>
+    </div>
+</body>
+</html>
